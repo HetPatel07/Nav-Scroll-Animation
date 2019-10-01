@@ -1,0 +1,237 @@
+/*! CSS Used from: https://web-star-ad.netlify.com/css/bootstrap-grid.min.css */
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 300%;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width:576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width:768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width:992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+/*! CSS Used from: https://web-star-ad.netlify.com/css/style.css */
+
+a {
+    display: inline-block;
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+.text-white {
+    color: #fff!important;
+}
+
+.text-primary {
+    color: #C02F1D!important;
+}
+
+.text-center {
+    text-align: center!important;
+}
+
+.brand img {
+    width: 200px;
+    padding: 5px 0px;
+}
+
+.header-container {
+    background-color: #1A1818!important;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1.2rem 0px;
+    box-shadow: none;
+}
+
+.header {
+    transition: .5s all;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.active {
+    flex-direction: row;
+}
+
+.menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.menu-icon .navicon {
+    background: #fff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.menu-icon .navicon:before,
+.menu-icon .navicon:after {
+    background: #fff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.menu-icon .navicon:before {
+    top: 5px;
+}
+
+.menu-icon .navicon:after {
+    top: -5px;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navBar {
+    font-size: 15px;
+}
+
+.nav-item {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.nav-link {
+    padding: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.nav-list {
+    height: auto;
+    transition: height .2s ease-out;
+    overflow: hidden;
+}
+
+.menu-btn:checked~.navBar .nav-list {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-item {
+        width: 100%;
+        border-bottom: 1px solid black;
+    }
+    .brand img {
+        width: 150px!important;
+    }
+    .brand {
+        float: left;
+    }
+    .navBar {
+        clear: both;
+        float: none!important;
+    }
+    .nav-list {
+        height: 0;
+    }
+    .menu-icon {
+        display: block;
+        float: right;
+    }
+    .nav-link {
+        font-size: 15px;
+        padding: 15px;
+    }
+    .header {
+        display: block!important;
+        padding: 10px;
+    }
+    #header {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+    }
+}
+
+input {
+    height: 100%;
+    background: transparent;
+    width: 100%;
+    padding: 0 5px;
+    border: 0;
+    font-size: 16px;
+    color: #727171;
+}
+
+input:focus {
+    outline: none;
+}
